@@ -21,19 +21,21 @@
             android:orientation="vertical" >
 
             <EditText
-                android:id="@+id/et_email"
+                android:id="@+id/user_inputText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/login_edittext_bg"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="50dp"
+                android:background="@drawable/login_edittext_bg"
+                android:hint="@string/username"
                 android:textAlignment="center"
-                android:textColor="@color/colorOnPrimary"
-                android:textColorHint="#CCC"
-                android:hint="@string/username"/>
+                android:textColor="@color/colorOnSecundary"
+                android:inputType="text"
+                android:textColorHint="#CCC" />
 
             <EditText
+                android:id="@+id/password_inputText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="textPassword"
@@ -42,7 +44,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:textAlignment="center"
-                android:textColor="@color/colorOnPrimary"
+                android:textColor="@color/colorOnSecundary"
                 android:textColorHint="#CCC"
                 android:hint="@string/password_hint"/>
 

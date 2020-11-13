@@ -11,19 +11,26 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="290dp">
+        android:layout_height="290dp"
+        android:background="@color/colorPrimary">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="290dp"
+            android:verticalScrollbarPosition="left"
+            app:contentScrim="@color/colorTitleBar"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:contentScrim="?colorPrimary" >
+            app:title="Produtos">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="290dp"
-                android:src="@drawable/capa"
-                android:scaleType="centerCrop"/>
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/capa" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
