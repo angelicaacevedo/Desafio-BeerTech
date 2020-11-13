@@ -12,7 +12,11 @@ data class Produto(
     @SerializedName("produto")
     val produto: String,
     @SerializedName( "descricao")
-    val name: String,
+    val descricao: String,
+    @SerializedName( "preco")
+    val preco: Float,
+    @SerializedName( "desconto")
+    val desconto: Boolean,
     @SerializedName("imagem")
-    val thumbUrl: String
+    val imagem: String
 )

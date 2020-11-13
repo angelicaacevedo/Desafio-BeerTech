@@ -1,5 +1,6 @@
 package com.example.desafio.view
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,15 +28,23 @@ class ProdutosListAdapter: RecyclerView.Adapter<ProdutosListAdapter.ProdutosList
 
     override fun onBindViewHolder(holder: ProdutosListViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item.name, item.thumbUrl)
+        holder.bind(item.produto, item.descricao, item.preco.toString(), item.desconto, item.imagem)
     }
 
     inner class ProdutosListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)  {
-        private val itemTitle = itemView.findViewById<TextView>(R.id.produtoName)
+        private val itemTitle = itemView.findViewById<TextView>(R.id.produtoTitle)
+        private val itemDescription = itemView.findViewById<TextView>(R.id.produtoDescription)
+        private val itemPrice = itemView.findViewById<TextView>(R.id.produtoPrice)
         private val itemImage = itemView.findViewById<ImageView>(R.id.produtoImage)
 
-        fun bind(title: String, url: String) {
+        fun bind(title: String, description: String, price: String, desconto: Boolean, url: String) {
+            itemDescription.text = description
             itemTitle.text = title
+            itemPrice.text = "R$ $price"
+            if(desconto == true){
+                itemPrice.setTextColor(Color.parseColor("#0FB816"))
+            }
+
             val url: String = url
 
             if(url.isNotEmpty()) {
