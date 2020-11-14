@@ -41,6 +41,7 @@ class ProdutosListAdapter: RecyclerView.Adapter<ProdutosListAdapter.ProdutosList
             itemDescription.text = description
             itemTitle.text = title
             itemPrice.text = "R$ $price"
+
             if(desconto == true){
                 itemPrice.setTextColor(Color.parseColor("#0FB816"))
             }
@@ -50,12 +51,12 @@ class ProdutosListAdapter: RecyclerView.Adapter<ProdutosListAdapter.ProdutosList
             if(url.isNotEmpty()) {
                 Glide.with(itemView.context)
                     .load(url)
-                    .placeholder(R.drawable.ic_produto)
-                    .error(R.drawable.ic_produto)
+                    .placeholder(R.drawable.ic_cerveja)
+                    .error(R.drawable.ic_cerveja)
                     .into(itemImage)
             } else {
                 Glide.with(itemView.context).clear(itemView)
-                itemImage.setImageResource(R.drawable.ic_produto)
+                itemImage.setImageResource(R.drawable.ic_cerveja)
             }
         }
     }

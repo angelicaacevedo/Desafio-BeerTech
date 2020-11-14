@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio.R
 import com.example.desafio.data.ProdutoDataBase
-import com.example.desafio.network.ProdutosApi
+import com.example.desafio.network.buildService
 import com.example.desafio.repository.ProdutosListRepository
 import com.example.desafio.viewmodel.ProdutosListViewModel
 import com.example.desafio.viewmodel.ProdutosListViewModelFactory
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val databaseDao = ProdutoDataBase.getDatabase(this, CoroutineScope(Dispatchers.IO)).ProdutoDAO()
-        val remoteService = ProdutosApi.retrofitService
+        val remoteService = buildService.RETROFIT_SERVICE_BUILDER
         val repository = ProdutosListRepository(databaseDao, remoteService)
 
         val viewModelFactory = ProdutosListViewModelFactory(repository)

@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.desafio.data.ProdutoDAO
 import com.example.desafio.entity.Produto
-import com.example.desafio.network.ProdutosApiService
+import com.example.desafio.network.ApiServiceBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,7 +16,7 @@ import retrofit2.Response
 import java.lang.Exception
 
 class ProdutosListRepository(private val ProdutoDAO: ProdutoDAO,
-                             private val produtoApi: ProdutosApiService
+                             private val produtoApiBuilder: ApiServiceBuilder
 ) {
     private val produtoListResponse = MutableLiveData<List<Produto>>()
 
@@ -41,7 +41,7 @@ class ProdutosListRepository(private val ProdutoDAO: ProdutoDAO,
     private fun getProdutosFromRemote() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val listResult = produtoApi.getProdutos()
+                val listResult = produtoApiBuilder.getProdutos()
 
                 listResult.enqueue(object : Callback<List<Produto>> {
 

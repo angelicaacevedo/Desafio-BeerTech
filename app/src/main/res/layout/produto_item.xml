@@ -12,7 +12,7 @@
         android:id="@+id/produtoImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/ic_produto"
+        app:srcCompat="@drawable/ic_cerveja"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="29dp" />
 
