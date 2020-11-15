@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.desafio.R
 import com.example.desafio.entity.Login
@@ -37,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
                     findViewById<TextView>(R.id.messageErro).visibility = (View.VISIBLE)
                 }
             }
+
 
         }
 
