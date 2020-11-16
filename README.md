@@ -10,6 +10,9 @@
 
 ![Lista de produtos](https://user-images.githubusercontent.com/71178527/99272502-a0f11100-2806-11eb-8dd6-6a7fd38f4118.png)
 
+![Tela inicial de produtos](https://user-images.githubusercontent.com/71178527/99272757-edd4e780-2806-11eb-9be7-06974423ae6b.png)
+
+
 
 ### Bonus:
 * Fazer uma tela de login
