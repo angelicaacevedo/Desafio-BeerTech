@@ -29,4 +29,4 @@
 * Mostrar ao usuário, caso haja erro ao chamar a API
 * Exemplo de tela:
 
-![Screenshot from 2020-11-11 13-36-01](https://user-images.githubusercontent.com/29542731/98838565-336a6c80-2423-11eb-99f4-e3035b0fba69.png)
+<img width="328" alt="Tela de login" src="https://user-images.githubusercontent.com/71178527/99273442-ca5e6c80-2807-11eb-92c6-1e18886585b4.png">
