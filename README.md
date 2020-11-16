@@ -8,7 +8,7 @@
 * Validar se o campo **desconto == true** e colocar o campo **preço** em verde #0FB816
 * Exemplo da tela: 
 
-![Screenshot from 2020-11-11 13-36-14](https://user-images.githubusercontent.com/29542731/98838519-264d7d80-2423-11eb-926b-a11c70372cd4.png)
+![Lista de produtos](https://user-images.githubusercontent.com/71178527/99272502-a0f11100-2806-11eb-8dd6-6a7fd38f4118.png)
 
 
 ### Bonus:
